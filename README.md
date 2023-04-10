@@ -1,13 +1,13 @@
 # liquibase-docker
 
-[![](https://images.microbadger.com/badges/image/kilna/liquibase.svg)](https://microbadger.com/images/kilna/liquibase)
-[![](https://img.shields.io/docker/pulls/kilna/liquibase.svg?style=plastic)](https://hub.docker.com/r/kilna/liquibase/)
-[![](https://img.shields.io/docker/stars/kilna/liquibase.svg?style=plastic)](https://hub.docker.com/r/kilna/liquibase/)
-[![](https://img.shields.io/badge/docker_build-automated-blue.svg?style=plastic)](https://cloud.docker.com/swarm/kilna/repository/docker/kilna/liquibase/builds)
+[![](https://images.microbadger.com/badges/image/Prasanth595/liquibase.svg)](https://microbadger.com/images/Prasanth595/liquibase)
+[![](https://img.shields.io/docker/pulls/Prasanth595/liquibase.svg?style=plastic)](https://hub.docker.com/r/Prasanth595/liquibase/)
+[![](https://img.shields.io/docker/stars/Prasanth595/liquibase.svg?style=plastic)](https://hub.docker.com/r/Prasanth595/liquibase/)
+[![](https://img.shields.io/badge/docker_build-automated-blue.svg?style=plastic)](https://cloud.docker.com/swarm/Prasanth595/repository/docker/Prasanth595/liquibase/builds)
 
 **A lightweight Docker for running [Liquibase](https://www.liquibase.org)**
 
-DockerHub: [liquibase](https://hub.docker.com/r/kilna/liquibase/) - GitHub: [liquibase-docker](https://github.com/kilna/liquibase-docker)
+DockerHub: [liquibase](https://hub.docker.com/r/Prasanth595/liquibase/) - GitHub: [liquibase-docker](https://github.com/Prasanth595/liquibase-docker)
 
 # Liquibase Docker images with drivers
 
@@ -17,10 +17,10 @@ DockerHub: [liquibase](https://hub.docker.com/r/kilna/liquibase/) - GitHub: [liq
 
 | DockerHub Image | GitHub Source |
 |---|---|
-| [**liquibase-postgres**](https://hub.docker.com/r/kilna/liquibase-postgres/) | [liquibase-postgres-docker](https://github.com/kilna/liquibase-postgres-docker) |
-| [**liquibase-mysql**](https://hub.docker.com/r/kilna/liquibase-mysql/) | [liquibase-mysql-docker](https://github.com/kilna/liquibase-mysql-docker) |
-| [**liquibase-mariadb**](https://hub.docker.com/r/kilna/liquibase-mariadb/) | [liquibase-mariadb-docker](https://github.com/kilna/liquibase-mariadb-docker) |
-| [**liquibase-sqlite**](https://hub.docker.com/r/kilna/liquibase-sqlite/) | [liquibase-sqlite-docker](https://github.com/kilna/liquibase-sqlite-docker) |
+| [**liquibase-postgres**](https://hub.docker.com/r/Prasanth595/liquibase-postgres/) | [liquibase-postgres-docker](https://github.com/Prasanth595/liquibase-postgres-docker) |
+| [**liquibase-mysql**](https://hub.docker.com/r/Prasanth595/liquibase-mysql/) | [liquibase-mysql-docker](https://github.com/Prasanth595/liquibase-mysql-docker) |
+| [**liquibase-mariadb**](https://hub.docker.com/r/Prasanth595/liquibase-mariadb/) | [liquibase-mariadb-docker](https://github.com/Prasanth595/liquibase-mariadb-docker) |
+| [**liquibase-sqlite**](https://hub.docker.com/r/Prasanth595/liquibase-sqlite/) | [liquibase-sqlite-docker](https://github.com/Prasanth595/liquibase-sqlite-docker) |
 
 # Usage
 
@@ -29,7 +29,7 @@ DockerHub: [liquibase](https://hub.docker.com/r/kilna/liquibase/) - GitHub: [liq
 You can use this image by creating your own `Dockerfile` which inherits using a FROM line:
 
 ```
-FROM kilna/liquibase-mysql-docker
+FROM Prasanth595/liquibase-mysql-docker
 ENV LIQUIBASE_HOST=database.server
 ENV LIQUIBASE_DATABASE=dbname
 ENV LIQUIBASE_USERNAME=user
@@ -60,7 +60,7 @@ appropriate to your database like so... where _/local/path/to/changelog/_ is the
 
 ```
 $ docker run -e LIQUIBASE_HOST=database.server -e LIQUIBASE_USERNAME=user -e LIQUIBASE_PASSWORD=pass \
-    -e LIQUIBASE_DATABASE=dbname -v /local/path/to/changelog/:/workspace/ kilna/liquibase-mysql \
+    -e LIQUIBASE_DATABASE=dbname -v /local/path/to/changelog/:/workspace/ Prasanth595/liquibase-mysql \
     liquibase updateTestingRollback
 ```
 
